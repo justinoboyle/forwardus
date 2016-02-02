@@ -3,3 +3,4 @@ temp/
 bin/
 node_modules/
 nwjs.app
+.DS_Store
