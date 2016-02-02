@@ -1,0 +1,32 @@
+{
+  "name": "forwardus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "bash ./build.sh",
+    "workspace": "bash ./scripts/fetchDepend.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ip": "^1.1.0",
+    "nwjs-osx-menu": "0.0.4"
+  },
+  "window": {
+    "title": "Forwardus",
+    "icon": "icon.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 450,
+    "height": 565,
+    "position": "mouse",
+    "min_width": 450,
+    "min_height": 565,
+    "max_width": 450,
+    "max_height": 565
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

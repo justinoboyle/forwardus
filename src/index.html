@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" id="material-href" href="https://code.getmdl.io/1.1.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.1.0/material.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .mdl-layout {
+    	align-items: center;
+      justify-content: center;
+    }
+    .mdl-layout__content {
+    	padding: 24px;
+    	flex: none;
+    }
+    centerouter{
+      width:100%;
+
+      /* Firefox */
+      display:-moz-box;
+      -moz-box-pack:center;
+      -moz-box-align:center;
+
+      /* Safari and Chrome */
+      display:-webkit-box;
+      -webkit-box-pack:center;
+      -webkit-box-align:center;
+
+      /* W3C */
+      display:box;
+      box-pack:center;
+      box-align:center;
+    }
+    centerinner{
+        width:50%;
+    }
+    body{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+	<main class="mdl-layout__content">
+		<div class="mdl-card mdl-shadow--6dp">
+			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+				<h2 class="mdl-card__title-text">Forwardus</h2>
+			</div>
+	  	<div class="mdl-card__supporting-text">
+				<form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="portLocal" value="80">
+            <label class="mdl-textfield__label" id="portLabel" for="portLocal">Local Port</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="portExternal" value="80">
+            <label class="mdl-textfield__label" id="portLabel" for="portExternal">External Port</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="description" value="Web Server"/>
+						<label class="mdl-textfield__label" for="description">Description</label>
+					</div>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="lock-ports">
+            <input type="checkbox" id="lock-ports" class="mdl-checkbox__input" checked>
+            <span class="mdl-checkbox__label">Lock internal and external ports</span>
+          </label>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="forward-tcp">
+            <input type="checkbox" id="forward-tcp" class="mdl-checkbox__input" checked>
+            <span class="mdl-checkbox__label">Forward TCP</span>
+          </label>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="forward-udp">
+            <input type="checkbox" id="forward-udp" class="mdl-checkbox__input">
+            <span class="mdl-checkbox__label">Forward UDP</span>
+          </label>
+				</form>
+			</div>
+			<div class="mdl-card__actions mdl-card--border">
+				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="applyButton">Apply</button>
+			</div>
+		</div>
+	</main>
+  <centerouter>
+    <centerinner>
+  <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button type="button" class="mdl-snackbar__action"></button>
+  </div>
+</centerinner>
+  </centerouter>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="index.js"></script>
+  </body>
+</html>

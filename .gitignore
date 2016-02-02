@@ -1,0 +1,5 @@
+build/
+temp/
+bin/
+node_modules/
+nwjs.app
